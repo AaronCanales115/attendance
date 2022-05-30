@@ -25,7 +25,7 @@ $results = $crud->getSpecialties();
             <label for="specialty" class="form-label">Area of expertise</label>
             <select class="form-select" id="specialty" name="specialty">               
                 <?php while($r = $results->fetch(PDO::FETCH_ASSOC)){ ?>
-                    <option value="<?php echo $r['specialty_id']?>>"> <?php echo $r['name']?> </option>
+                    <option value="<?php echo $r['specialty_id']?>"> <?php echo $r['name']?> </option>
                 <?php }?> 
             </select>
         </div>
