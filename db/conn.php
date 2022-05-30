@@ -1,8 +1,14 @@
 <?php 
-$host = '127.0.0.1:33065';
+/*$host = '127.0.0.1:33065';
 $dbname = 'attendace_db';
 $user = 'root';
 $pass = '';
+$charset = 'utf8mb4';*/
+
+$host = 'remotemysql.com';
+$dbname = 'ZYQg96vBFV';
+$user = 'ZYQg96vBFV';
+$pass = 'q0bfwXO4SC';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
