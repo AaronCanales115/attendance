@@ -1,15 +1,15 @@
 <?php 
-/*$host = '127.0.0.1:33065';
+$host = '127.0.0.1:33065';
 $dbname = 'attendace_db';
 $user = 'root';
 $pass = '';
-$charset = 'utf8mb4';*/
+$charset = 'utf8mb4';
 
-$host = 'remotemysql.com';
+/*$host = 'remotemysql.com';
 $dbname = 'ZYQg96vBFV';
 $user = 'ZYQg96vBFV';
 $pass = 'q0bfwXO4SC';
-$charset = 'utf8mb4';
+$charset = 'utf8mb4';*/
 
 $dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
 
@@ -22,6 +22,9 @@ catch(PDOException $e){
 }
 
 require_once 'crud.php';
+require_once 'users.php';
+
 $crud = new crud($pdo);
+$user = new user($pdo);
 
 ?> 
