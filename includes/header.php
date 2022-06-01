@@ -1,3 +1,5 @@
+<?php include_once 'includes/session.php'; ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -17,14 +19,16 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="viewrecords.php">View Attendees</a>
-              </li>
-            </ul>
+            
+            <div class="navbar-nav mr-auto">
+            
+                <a class="nav-item nav-link active" aria-current="page" href="index.php">Home</a>
+                <a class="nav-item nav-link" href="viewrecords.php">View Attendees</a>
+            </div>
+
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active" aria-current="page" href="login.php">Login</a>
+            </div>
           </div>
         </div>
       </nav>
