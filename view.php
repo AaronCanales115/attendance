@@ -2,6 +2,7 @@
 $title = 'Index'; 
 require 'includes/header.php'; 
 require_once 'db/conn.php';
+require_once 'includes/auth_check.php';
 
 if(isset($_GET['id'])){
     $id = $_GET['id'];
