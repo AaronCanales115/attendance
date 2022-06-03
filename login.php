@@ -8,14 +8,22 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $password = $_POST['password'];
     $new_password = md5($password.$username);
 
-   $result = $users->getUser($username, $new_password);
-}
+   $result = $user->getUser($username, $new_password);
+
+   if(!$result){
+   echo '<div class="alert alert-danger">Username or password incorrect, please try again! </div>';
+   } else {
+    $_SESSION['username'] = $username;
+    $_SESSION['userid'] = $result['id'];
+    header('Location: viewrecords.php');
+    }   
+} 
 
 ?>
 
 <h1 class="text-center"> <?php echo $title?> </h1>
 
-<form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="post">
+<form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
     <table class="table table-sm">
         <tr>
             <td><label for="username">Username: *</label></td>

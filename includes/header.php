@@ -27,7 +27,12 @@
             </div>
 
             <div class="navbar-nav ml-auto">
+              <?php if(!isset($_SESSION['userid'])){ ?>
                 <a class="nav-item nav-link active" aria-current="page" href="login.php">Login</a>
+                <?php } else{ ?>
+                  <a class="nav-item nav-link active" aria-current="page" href="#"><span>Hello <?php echo $_SESSION['username']?> </span></a>
+                  <a class="nav-item nav-link active" aria-current="page" href="logout.php">Log out</a>
+                  <?php }?>
             </div>
           </div>
         </div>
