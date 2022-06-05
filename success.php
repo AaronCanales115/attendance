@@ -2,7 +2,7 @@
 $title = 'Success'; 
 require 'includes/header.php'; 
 require_once 'db/conn.php';
-require 'sendemail.php';
+//require 'sendemail.php';
 
 if(isset($_POST['submit'])){
   $fname = $_POST['firstname'];

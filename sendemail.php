@@ -1,5 +1,5 @@
 <?php 
-
+/*
 require 'vendor/autoload.php';
 
     class sendEmail{
@@ -24,5 +24,5 @@ require 'vendor/autoload.php';
             }
         }
     }
-
+*/
 ?>
