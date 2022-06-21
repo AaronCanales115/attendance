@@ -11,7 +11,14 @@ if(isset($_POST['submit'])){
   $email = $_POST['email'];
   $contact = $_POST['phone'];
   $specialty = $_POST['specialty'];
-  $isSucces = $crud->insert($fname, $lname, $dob, $email, $contact, $specialty);
+
+  $orig_file = $_FILES["avatar"]["tmp_name"];
+  $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
+  $targer_dir = 'uploads/';
+  $destination = "$targer_dir$contact. $ext";
+  move_uploaded_file($orig_file, $destination);
+
+  $isSucces = $crud->insert($fname, $lname, $dob, $email, $contact, $specialty, $destination);
 
   if($isSucces){
     //SendEmail::sendEmail($email, 'Welcome to IT conference', 'You have successfully registered.');
@@ -39,6 +46,7 @@ if(isset($_POST['submit'])){
 </div> -->
 
 <!-- Post Method -->
+<img src="<?php echo $destination;?>" style="width: 20%; height: 20%">
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title"><?php echo $_POST["firstname"] . " " . $_POST["lastname"] ?> </h5>

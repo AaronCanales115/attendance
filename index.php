@@ -8,7 +8,7 @@ $results = $crud->getSpecialties();
 
     <h1 class="text-center">Registration for IT conference</h1>
 
-    <form method="post" action="success.php">
+    <form method="post" action="success.php" enctype='multipart/form-data'>
         <div class="mb-3">
             <label for="firstname" class="form-label">First Name</label>
             <input type="text" class="form-control" id="firstname" name="firstname">
