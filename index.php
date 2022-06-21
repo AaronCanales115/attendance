@@ -46,6 +46,8 @@ $results = $crud->getSpecialties();
         </div>
         <br>
         <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+        <br>
+        <br>
     </form>
 
 <?php require 'includes/footer.php'; ?>
